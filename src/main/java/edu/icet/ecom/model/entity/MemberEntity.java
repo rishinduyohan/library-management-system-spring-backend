@@ -2,12 +2,12 @@ package edu.icet.ecom.model.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 
 @AllArgsConstructor
 @NoArgsConstructor
+@Setter
+@Getter
 @ToString
 @Entity
 public class MemberEntity {
