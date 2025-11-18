@@ -9,4 +9,10 @@ public class MemberService {
     public boolean addMember(MemberEntity member){
         return memberRepository.addMember(member);
     }
+    public boolean updateMember(MemberEntity member){
+        return memberRepository.updateMember(member);
+    }
+    public MemberEntity getMember(String id){
+        return memberRepository.getMember(id);
+    }
 }

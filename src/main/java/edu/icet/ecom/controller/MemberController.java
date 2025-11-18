@@ -13,9 +13,12 @@ import org.springframework.web.bind.annotation.*;
 public class MemberController {
     MemberService memberService = new MemberService();
 
-    @GetMapping
-    public MemberDTO getMember(){
-        return new MemberDTO("M001","Kamla","2008746541","Eight seven store","0785698521");
+    @GetMapping("{id}")
+    public MemberEntity getMember(@PathVariable String id){
+        if (memberService.getMember(id)!=null){
+            ResponseEntity.ok("Member Not found!");
+        }
+        return memberService.getMember(id);
     }
 
     @PostMapping("/add")
@@ -24,5 +27,13 @@ public class MemberController {
             return ResponseEntity.ok("Member added success!");
         }
         return ResponseEntity.ok("Member NOT added!");
+    }
+
+    @PostMapping("/update")
+    public ResponseEntity<String> updateMember(@RequestBody MemberEntity member){
+        if (memberService.updateMember(member)){
+            return ResponseEntity.ok("Member updated!");
+        }
+        return ResponseEntity.ok("Member NOT updated!");
     }
 }
