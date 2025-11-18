@@ -15,4 +15,7 @@ public class MemberService {
     public MemberEntity getMember(String id){
         return memberRepository.getMember(id);
     }
+    public boolean deleteMember(String id){
+        return memberRepository.deleteMember(id);
+    }
 }

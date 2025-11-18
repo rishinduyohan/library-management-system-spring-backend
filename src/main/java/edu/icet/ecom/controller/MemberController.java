@@ -1,6 +1,5 @@
 package edu.icet.ecom.controller;
 
-import edu.icet.ecom.model.dto.MemberDTO;
 import edu.icet.ecom.model.entity.MemberEntity;
 import edu.icet.ecom.service.MemberService;
 import org.springframework.http.ResponseEntity;
@@ -35,5 +34,13 @@ public class MemberController {
             return ResponseEntity.ok("Member updated!");
         }
         return ResponseEntity.ok("Member NOT updated!");
+    }
+
+    @DeleteMapping("{id}")
+    public ResponseEntity<String> deleteMembers(@PathVariable String id){
+        if (memberService.deleteMember(id)){
+            return ResponseEntity.ok("Member deleted!");
+        }
+        return ResponseEntity.ok("Member NOT deleted!");
     }
 }
