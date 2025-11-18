@@ -6,6 +6,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @Controller
 @ResponseBody
 @RequestMapping("/api/library/members")
@@ -42,5 +44,10 @@ public class MemberController {
             return ResponseEntity.ok("Member deleted!");
         }
         return ResponseEntity.ok("Member NOT deleted!");
+    }
+
+    @GetMapping("/all")
+    public List<MemberEntity> getAll(){
+        return memberService.getAll();
     }
 }

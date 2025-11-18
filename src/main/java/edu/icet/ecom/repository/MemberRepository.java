@@ -6,6 +6,8 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
+import java.util.List;
+
 public class MemberRepository {
     SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
     Session session = sessionFactory.openSession();
@@ -31,5 +33,8 @@ public class MemberRepository {
         session.remove(getMember(id));
         transaction.commit();
         return true;
+    }
+    public List<MemberEntity> getAll(){
+        return session.createQuery("FROM MemberEntity",MemberEntity.class).list();
     }
 }

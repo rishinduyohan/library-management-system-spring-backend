@@ -3,6 +3,8 @@ package edu.icet.ecom.service;
 import edu.icet.ecom.model.entity.MemberEntity;
 import edu.icet.ecom.repository.MemberRepository;
 
+import java.util.List;
+
 public class MemberService {
     MemberRepository memberRepository = new MemberRepository();
 
@@ -17,5 +19,8 @@ public class MemberService {
     }
     public boolean deleteMember(String id){
         return memberRepository.deleteMember(id);
+    }
+    public List<MemberEntity> getAll(){
+        return memberRepository.getAll();
     }
 }
