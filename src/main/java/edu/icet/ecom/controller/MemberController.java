@@ -2,6 +2,7 @@ package edu.icet.ecom.controller;
 
 import edu.icet.ecom.model.entity.MemberEntity;
 import edu.icet.ecom.service.MemberService;
+import edu.icet.ecom.service.impl.MemberServiceImpl;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -12,11 +13,11 @@ import java.util.List;
 @ResponseBody
 @RequestMapping("/api/library/members")
 public class MemberController {
-    MemberService memberService = new MemberService();
+    MemberService memberService = new MemberServiceImpl();
 
     @GetMapping("{id}")
     public MemberEntity getMember(@PathVariable String id){
-        if (memberService.getMember(id)!=null){
+        if (memberService.getMember(id)==null){
             ResponseEntity.ok("Member Not found!");
         }
         return memberService.getMember(id);
