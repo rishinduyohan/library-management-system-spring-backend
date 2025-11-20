@@ -5,14 +5,6 @@
 
 ---
 
-<div align="center">
-<!-- Badges -->
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/Java-25-orange%3Fstyle%3Dflat-square%26logo%3Dopenjdk%26logoColor%3Dwhite" alt="Java 25" />
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/Spring%2520Boot-Web-green%3Fstyle%3Dflat-square%26logo%3Dspringboot%26logoColor%3Dwhite" alt="Spring Boot" />
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/Hibernate-Native-blue%3Fstyle%3Dflat-square%26logo%3Dhibernate%26logoColor%3Dwhite" alt="Hibernate" />
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/Build-Maven-C71A36%3Fstyle%3Dflat-square%26logo%3Dapachemaven%26logoColor%3Dwhite" alt="Maven" />
-</div>
-
 ## 🚀 Features
 
 <table align="center">
