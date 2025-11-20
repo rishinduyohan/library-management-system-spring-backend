@@ -5,15 +5,36 @@
 
 ---
 
+<div align="center">
+<!-- Badges -->
+<img src="https://www.google.com/search?q=https://img.shields.io/badge/Java-25-orange%3Fstyle%3Dflat-square%26logo%3Dopenjdk%26logoColor%3Dwhite" alt="Java 25" />
+<img src="https://www.google.com/search?q=https://img.shields.io/badge/Spring%2520Boot-Web-green%3Fstyle%3Dflat-square%26logo%3Dspringboot%26logoColor%3Dwhite" alt="Spring Boot" />
+<img src="https://www.google.com/search?q=https://img.shields.io/badge/Hibernate-Native-blue%3Fstyle%3Dflat-square%26logo%3Dhibernate%26logoColor%3Dwhite" alt="Hibernate" />
+<img src="https://www.google.com/search?q=https://img.shields.io/badge/Build-Maven-C71A36%3Fstyle%3Dflat-square%26logo%3Dapachemaven%26logoColor%3Dwhite" alt="Maven" />
+</div>
+
 ## 🚀 Features
 
-- **Book Management**
-    - Add, update, list, and fetch books by ID
-- **Member Management**
-    - Register members, update profiles, list, and fetch by ID
-- Uses Hibernate native session/transaction management (no `application.properties` persistence config)
-
----
+<table align="center">
+<tr>
+<td width="50%" valign="top">
+<h3 align="center">📖 Book Management</h3>
+<ul>
+<li><strong>Full Lifecycle:</strong> Add new books and update details.</li>
+<li><strong>Retrieval:</strong> List all books or fetch by unique ID.</li>
+<li><strong>Inventory:</strong> Complete management of library stock.</li>
+</ul>
+</td>
+<td width="50%" valign="top">
+<h3 align="center">👤 Member Management</h3>
+<ul>
+<li><strong>Registration:</strong> Register new members efficiently.</li>
+<li><strong>Profiles:</strong> Update member information on the fly.</li>
+<li><strong>Search:</strong> Retrieve member details by ID.</li>
+</ul>
+</td>
+</tr>
+</table>
 
 ## 🛠 Technology Stack
 
@@ -90,3 +111,4 @@ Place `hibernate.cfg.xml` under `src/main/resources/` and update DB credentials:
 
   </session-factory>
 </hibernate-configuration>
+```
