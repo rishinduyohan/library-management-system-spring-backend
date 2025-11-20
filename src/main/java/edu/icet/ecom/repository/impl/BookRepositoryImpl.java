@@ -23,21 +23,27 @@ public class BookRepositoryImpl implements BookRepository {
 
     @Override
     public boolean updateBook(BookEntity book) {
-        return false;
+        Transaction transaction = session.beginTransaction();
+        session.merge(book);
+        transaction.commit();
+        return true;
     }
 
     @Override
     public BookEntity getBook(String id) {
-        return null;
+        return session.find(BookEntity.class,id);
     }
 
     @Override
     public boolean deleteBook(String id) {
-        return false;
+        Transaction transaction = session.beginTransaction();
+        session.remove(getBook(id));
+        transaction.commit();
+        return true;
     }
 
     @Override
     public List<BookEntity> getAll() {
-        return List.of();
+        return session.createQuery("From BookEntity",BookEntity.class).list();
     }
 }

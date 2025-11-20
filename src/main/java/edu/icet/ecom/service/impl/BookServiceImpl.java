@@ -4,8 +4,7 @@ import edu.icet.ecom.model.entity.BookEntity;
 import edu.icet.ecom.repository.BookRepository;
 import edu.icet.ecom.repository.impl.BookRepositoryImpl;
 import edu.icet.ecom.service.BookService;
-
-import java.util.List;
+import org.springframework.http.ResponseEntity;
 
 public class BookServiceImpl implements BookService {
     BookRepository bookRepository = new BookRepositoryImpl();
@@ -16,21 +15,21 @@ public class BookServiceImpl implements BookService {
 
     @Override
     public boolean updateBook(BookEntity book) {
-        return false;
+        return bookRepository.updateBook(book);
     }
 
     @Override
-    public BookEntity getBook(String id) {
-        return null;
+    public Object getBook(String id) {
+        return bookRepository.getBook(id)!=null?bookRepository.getBook(id): ResponseEntity.ok("There is not such book in that id");
     }
 
     @Override
     public boolean deleteBook(String id) {
-        return false;
+        return bookRepository.deleteBook(id);
     }
 
     @Override
-    public List<BookEntity> getAll() {
-        return List.of();
+    public Object getAll() {
+        return bookRepository.getAll() != null ? bookRepository.getAll() : ResponseEntity.ok("Empty books!");
     }
 }

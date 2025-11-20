@@ -9,9 +9,9 @@ public interface BookService {
 
     boolean updateBook(BookEntity book);
 
-    BookEntity getBook(String id);
+    Object getBook(String id);
 
     boolean deleteBook(String id);
 
-    List<BookEntity> getAll();
+    Object getAll();
 }
